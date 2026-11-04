@@ -1,4 +1,3 @@
-
 = Versuchsaufbau
 == Komponenten
 === Thread Adapter
@@ -12,5 +11,13 @@
 
 === Software
 ==== Thread Border Router
+
+#include "Wireshark.typ"
+
+
+
+#include "Sniffing.typ"
+
+
 
 #pagebreak()
