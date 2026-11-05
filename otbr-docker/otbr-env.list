@@ -1,0 +1,4 @@
+OT_RCP_DEVICE=spinel+hdlc+uart:///dev/ttyUSB0?uart-baudrate=921600
+OT_INFRA_IF=wlp0s20f3
+OT_THREAD_IF=wpan0
+OT_LOG_LEVEL=7
