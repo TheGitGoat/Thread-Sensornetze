@@ -156,6 +156,8 @@ Radio Co-processor version: SL-OPENTHREAD/3.1.1.0_GitHub-fb274efe6; EFR32
 
 Damit ist bestätigt, dass der OTBR-Agent die OpenThread-RCP-Firmware auf dem EFR32MG21 erkennt.
 
+Der Border Router sollte jetzt auch eine GUI haben die unter `http://localhost:8080/` erreichbar ist.
+
 ## 8. OpenThread CLI aufrufen
 
 Die OpenThread-CLI innerhalb des Containers starten:
