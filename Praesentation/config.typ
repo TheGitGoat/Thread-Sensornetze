@@ -4,10 +4,10 @@
 // Zentrale Theme-Konfiguration
 #let thread-theme = metropolyst-theme.with(
   config-info(
-    title: [Thread – IPv6-basiertes Mesh-Netzwerk],
+    title: [Thread - IPv6-basiertes Mesh-Netzwerk],
     subtitle: [Architektur, Routing und praktische Analyse],
     author: [Anthony Schmied, Lotte Richter, Jan Schiffer],
-    date: datetime.today(),
+    date: datetime(day: 02, month: 12, year: 2026),
     institution: [HTW Dresden],
   ),
 )
