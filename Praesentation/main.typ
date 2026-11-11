@@ -1,92 +1,41 @@
-// Metropolyst Theme - Presentation Template
-// A highly configurable Metropolis-style theme for Touying
 
-#import "@preview/metropolyst:0.1.0": *
+#import "config.typ": *
 
-// Theme setup with default configuration
-// See README.md for all available options
-#show: metropolyst-theme.with(
-  // Uncomment to customize:
-  // font: ("Fira Sans",),
-  // accent-color: rgb("#eb811b"),
-  // header-background-color: rgb("#23373b"),
-  config-info(
-    title: [Your Presentation Title],
-    subtitle: [Optional Subtitle],
-    author: [Your Name],
-    date: datetime.today(),
-    institution: [Your Institution],
-    // logo: emoji.rocket,
-  ),
-)
+// Einheitliches Theme für die gesamte Präsentation
+#show: thread-theme
 
-// Title slide
+// Titelfolie
 #title-slide()
 
-// Section divider
-= Introduction
+// 01 - Einführung
+#include "slides/01_introduction.typ"
 
-== Getting Started
+// 02 - Architektur
+#include "slides/02_architecture.typ"
 
-This presentation uses the Metropolyst theme with default settings:
+// 03 - 6LoWPAN
+#include "slides/03_6lowpan.typ"
 
-- *Aspect ratio:* 16:9
-- *Fonts:* Fira Sans throughout
-- *Accent color:* Orange (\#eb811b)
-- *Header background:* Dark teal (\#23373b)
+// 04 - OpenThread
+#include "slides/04_openthread.typ"
 
-== Example of two-column layout
-#slide(composer: (3fr, 2fr))[
-  === The first column is wider than the second
-  Because the code for the layout is
+// 05 - Routing und RPL
+#include "slides/05_routing.typ"
 
-  ```typst
-  #slide(composer: (3fr, 2fr))[
-    First column content
-  ][
-    Second column content
-  ]
-  ```
-][
-  === For equal width columns
-  You can instead do
+// 06 - Radio Duty Cycling
+#include "slides/06_duty_cycling.typ"
 
-  ```typst
-  #slide[
-    First column content
-  ][
-    Second colum content
-  ]
-  ```
-]
+// 07 - Netzwerkmanagement mit ot-ctl
+#include "slides/07_ot_ctl.typ"
 
-// Focus slide for emphasis
-#focus-slide[
-  This is a focus slide for emphasis!
-]
+// 08 - IPv6-Kommunikation
+#include "slides/08_ipv6.typ"
 
-== Configuration options, and a long slide title with font size automatically scaled to fit on one line
+// 09 - Wireshark und OTA-Sniffing
+#include "slides/09_wireshark.typ"
 
-These are the default styles for *bold*, #alert[alert], and #link("https://typst.app")[hyperlink] text.
+// 10 - Self-Healing Mesh
+#include "slides/10_self_healing.typ"
 
-View the #link("https://github.com/benzipperer/metropolyst")[documentation] for all configuration options.
-
-=== Example
-
-```typst
-#show: metropolyst-theme.with(
-  font: ("Roboto",),                       // Modern sans-serif
-  font-size: 22pt,                         // Slightly larger text
-  accent-color: rgb("#10b981"),            // Emerald accent
-  hyperlink-color: rgb("#0ea5e9"),         // Sky blue links
-  header-background-color: rgb("#0f172a"), // Slate dark header
-)
-#set strong(delta: 300)                    // Bolder bold text
-```
-
-#text(
-  font: "Roboto",
-  size: 22pt,
-)[These are the custom styles for #text(weight: "bold")[*bold*], #text(fill: rgb("#10b981"))[alert], and #link("https://typst.app")[#text(fill: rgb("#0ea5e9"))[hyperlink]] text.]
-
-
+// 11 - Fazit
+#include "slides/11_conclusion.typ"
