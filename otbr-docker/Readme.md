@@ -193,3 +193,61 @@ Wenn das Thread-Netzwerk noch nicht gestartet ist, kommen Fehlermeldungen bei `s
 Der OpenThread Border Router läuft als Docker-Container und kommuniziert über UART mit dem Sonoff ZBDongle-E (EFR32MG21).
 
 **Hinweis:** Das Starten des Containers bedeutet noch nicht, dass ein Thread-Netzwerk eingerichtet ist. Die Erstellung eines Thread-Datasets, der Start des Thread-Netzwerks sowie IPv6-Routing und Netzwerkerreichbarkeit müssen anschließend separat konfiguriert und überprüft werden.
+
+## Thread-Netzwerk aufbauen
+
+Siehe https://openthread.io/guides/border-router/form-network#form-a-thread-network
+
+### IKEA Steckdocke als Node hinzufügen
+Die Steckdose spricht nur Matter, deswegen muss das `chip-tool` installiert werden, um über die Kommandozeile mit der Steckdose zu kommunizieren
+
+Steckdose anmelden:
+```text
+chip-tool pairing code-thread 1 hex:THREAD_DATASET MATTER_SETUP_CODE
+````
+
+Dabei gilt:
+- `1` ist eine frei gewählte Geräte-ID.
+- `THREAD_DATASET` ist die Ausgabe von `dataset active -x` in der Thread-CLI
+- `MATTER_SETUP_CODE` ist der numerische Matter-Einrichtungscode deiner GRILLPLATS (`0236-961-8092`).
+
+## Ping Node inside the network
+
+Execute in the CLI:
+```text
+> prefix
+fda7:ebeb:12ae:1::/64 paos low 0800
+Done
+
+> netdata show
+Prefixes:
+fda7:ebeb:12ae:1::/64 paos low 0800
+Routes:
+fc00::/7 sa med 0800
+fda7:ebeb:12ae:2:0:0::/96 sn low 0800
+Services:
+44970 5d fd30b2399a5c5c8f4914fa6792180132d11f s 0800 0
+44970 01 4e000500000e10 s 0800 1
+Contexts:
+fda7:ebeb:12ae:1::/64 1 sc
+Commissioning:
+53264 - - -
+Done
+```
+
+**Mesh Local Prefix**: `fda7:ebeb:12ae:1::/64`
+
+### IPv6 address
+The address is build with `Mesh-Local-Präfix + 0000:00ff:fe00:RLOC16`
+
+Example:
+```
+> child table
+| ID  | RLOC16 | Timeout    | Age        | LQ In | C_VN |R|D|N|Ver|CSL|QMsgCnt|Suprvsn| Extended MAC     |
++-----+--------+------------+------------+-------+------+-+-+-+---+---+-------+-------+------------------+
+|   1 | 0x0801 |        240 |          8 |     3 |  216 |0|0|0|  4| 0 |     0 |   129 | b229ae4b6a99deb7 |
+|   2 | 0x0802 |        240 |          6 |     3 |  216 |0|0|0|  4| 0 |     0 |   129 | eefa0f3236996bda |
+```
+
+**Child ID=1**:
+RLOC16 = `0x0801` IPv6: `fda7:ebeb:12ae:1:0:ff:fe00:801`
