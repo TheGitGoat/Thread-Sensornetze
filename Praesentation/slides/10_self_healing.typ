@@ -3,34 +3,125 @@
 
 == Was bedeutet Self-Healing?
 
-- Automatische Anpassung an Topologieänderungen
-- Erkennung ausgefallener Router
-- Nutzung alternativer Kommunikationswege
-- Wiederherstellung der Erreichbarkeit
+#block(
+  fill: rgb("#f5f7f7"),
+  radius: 6pt,
+  inset: 12pt,
+)[
+  #text(size: 20pt, weight: "bold")[
+    Ein Thread-Netzwerk kann seine Kommunikationswege
+    automatisch an Topologieänderungen anpassen.
+  ]
+]
+
+#v(1em)
+
+- Routerausfälle können erkannt werden
+- Routinginformationen werden aktualisiert
+- Alternative Wege können genutzt werden
+- Keine manuelle Routenkonfiguration notwendig
+
+#v(0.8em)
+
+#text(fill: rgb("#eb811b"), weight: "bold")[
+  Voraussetzung: Ein alternativer Funkpfad
+  muss tatsächlich existieren.
+]
+
+#v(1fr)
+#text(size: 9pt, fill: gray)[
+  Quelle: OpenThread – Network Discovery and Formation
+]
+
 
 == Dynamisches Rerouting
 
-- Ausfall eines Routers
-- Erkennung veränderter Verbindungen
-- Anpassung der Routinginformationen
-- Weiterleitung über alternative Router
+#grid(
+  columns: (1fr, 1fr),
+  gutter: 16pt,
 
-// Hier später Vorher-Nachher-Topologie einfügen
+  [
+    *Vor dem Ausfall*
 
-== Live-Demonstration
+    #box(
+      width: 100%,
+      fill: rgb("#e5eff4"),
+      radius: 6pt,
+      inset: 14pt,
+    )[
+      #align(center)[
+        A → B → D
 
-- Thread-Mesh mit mehreren Routern
-- IPv6-Kommunikation starten
-- Einen Router gezielt ausschalten
-- Auswirkungen auf Ping und Routing beobachten
+        #v(0.5em)
 
-// Hier später Live-Demo durchführen
+        Alternativ: A → C → D
+      ]
+    ]
 
-== Auswertung des Experiments
+    - Bevorzugter Pfad über B
+    - Alternativer Weg vorhanden
+  ],
 
-- Paketverluste während des Ausfalls
-- Dauer bis zur Wiederherstellung
-- Veränderung der Kommunikationswege
-- Grenzen der Selbstheilung
+  [
+    *Nach dem Ausfall von B*
 
-// Hier später Messergebnisse einfügen
+    #box(
+      width: 100%,
+      fill: rgb("#fce9d8"),
+      radius: 6pt,
+      inset: 14pt,
+    )[
+      #align(center)[
+        A → C → D
+
+        #v(0.5em)
+
+        B nicht erreichbar
+      ]
+    ]
+
+    - Routinginformationen ändern sich
+    - Kommunikation über C möglich
+  ],
+)
+
+#v(1em)
+
+#text(size: 12pt, fill: gray)[
+  Schematisches Beispiel; tatsächlicher Pfad
+  hängt von Topologie und Pfadkosten ab.
+]
+
+#v(1fr)
+#text(size: 9pt, fill: gray)[
+  Quelle: OpenThread – Network Discovery and Formation
+]
+
+
+== Live-Demo: Routerausfall
+
+#table(
+  columns: (auto, 2.7fr),
+  stroke: 0.8pt + rgb("#dddddd"),
+  inset: 9pt,
+
+  [*1*], [Thread-Mesh mit alternativen Wegen aufbauen],
+  [*2*], [Routinginformationen dokumentieren],
+  [*3*], [Kontinuierlichen Ping starten],
+  [*4*], [Einen Router gezielt ausschalten],
+  [*5*], [Routing und Erreichbarkeit erneut prüfen],
+)
+
+#v(0.8em)
+
+*Zu untersuchende Messgrößen*
+
+- Anzahl verlorener Ping-Pakete
+- Dauer der Kommunikationsunterbrechung
+- Änderungen des Next Hops und der Pfadkosten
+
+#v(1fr)
+#text(size: 9pt, fill: gray)[
+  Eigener Versuchsaufbau;
+  OpenThread – CLI Command Reference
+]

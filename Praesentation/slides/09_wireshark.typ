@@ -1,36 +1,149 @@
 
 = Netzwerkanalyse mit Wireshark
 
-== Wireshark im Thread-Netzwerk
+== Warum Wireshark?
 
-- Analyse des Netzwerkverkehrs
-- Untersuchung von Protokollinformationen
-- Erkennung von Kommunikationsproblemen
-- Darstellung einzelner Pakete
+- Netzwerkverkehr auf Paketebene untersuchen
+- Protokollinformationen sichtbar machen
+- Kommunikationsabläufe nachvollziehen
+- Fehler und Paketverluste analysieren
+
+#v(1em)
+
+#block(
+  fill: rgb("#f5f7f7"),
+  radius: 6pt,
+  inset: 12pt,
+)[
+  *Typische Fragestellungen*
+
+  - Welche Geräte kommunizieren miteinander?
+  - Welche Protokolle werden verwendet?
+  - Was passiert beim Verbindungsaufbau?
+  - Wie verändert sich der Verkehr bei einem Ausfall?
+]
+
+#v(1fr)
+#text(size: 9pt, fill: gray)[
+  Quellen: Wireshark – User's Guide;
+  OpenThread – Packet Sniffing
+]
+
 
 == Over-the-Air Packet Sniffing
 
-- Erfassung von IEEE 802.15.4-Funkframes
-- Separater Sniffer als Empfangsgerät
-- Beobachtung der Kommunikation
-- Analyse mit Wireshark
+#align(center)[
+  #grid(
+    columns: (1fr, auto, 1fr, auto, 1fr),
+    gutter: 8pt,
+    align: center,
 
-// Hier später Sniffer-Aufbau darstellen
+    box(
+      fill: rgb("#e5eff4"),
+      radius: 6pt,
+      inset: 10pt,
+    )[
+      #align(center)[
+        *Thread-Geräte*
 
-== Analyse der Protokollschichten
+        #text(size: 11pt)[Funkverkehr]
+      ]
+    ],
 
-- IEEE 802.15.4
-- 6LoWPAN
-- IPv6 und ICMPv6
-- Thread-spezifische Protokollinformationen
+    text(size: 18pt)[→],
 
-// Hier später Wireshark-Screenshot einfügen
+    box(
+      fill: rgb("#fce9d8"),
+      radius: 6pt,
+      inset: 10pt,
+    )[
+      #align(center)[
+        *802.15.4-Sniffer*
 
-== Praktische Paketanalyse
+        #text(size: 11pt)[Mitschnitt]
+      ]
+    ],
 
-- Funkkanal auswählen
-- Pakete aufzeichnen
-- Relevante Protokolle filtern
-- Ping-Verkehr untersuchen
+    text(size: 18pt)[→],
 
-// Hier später Live-Demo oder Mitschnitt zeigen
+    box(
+      fill: rgb("#e5eff4"),
+      radius: 6pt,
+      inset: 10pt,
+    )[
+      #align(center)[
+        *Wireshark*
+
+        #text(size: 11pt)[Analyse]
+      ]
+    ],
+  )
+]
+
+#v(1em)
+
+- Separates Gerät empfängt Funkframes
+- Passender IEEE-802.15.4-Kanal erforderlich
+- Zeitstempel und Frameinformationen erfassen
+- Entschlüsselung benötigt passende Schlüssel
+
+#v(0.6em)
+
+#text(fill: rgb("#eb811b"), weight: "bold")[
+  OTA-Sniffing erfasst Funkframes,
+  nicht die analoge Funkwelle.
+]
+
+#v(1fr)
+#text(size: 9pt, fill: gray)[
+  Quellen: OpenThread – Packet Sniffing;
+  Wireshark – IEEE 802.15.4
+]
+
+
+== Was sehen wir im Paketmitschnitt?
+
+#table(
+  columns: (1.2fr, 2.2fr),
+  stroke: 0.8pt + rgb("#dddddd"),
+  inset: 9pt,
+
+  table.header(
+    [*Protokoll*],
+    [*Beobachtbare Informationen*],
+  ),
+
+  [IEEE 802.15.4],
+  [MAC-Adressen, Frame-Typ, Sequenznummer],
+
+  [6LoWPAN],
+  [Komprimierung und Fragmentierung],
+
+  [IPv6],
+  [Quell- und Zieladressen],
+
+  [ICMPv6],
+  [Echo Request und Echo Reply],
+
+  [MLE],
+  [Nachbarschafts- und Kontrollnachrichten],
+)
+
+#v(0.8em)
+
+#block(
+  fill: rgb("#f5f7f7"),
+  radius: 6pt,
+  inset: 10pt,
+)[
+  *Live-Demo:*
+
+  Ping auslösen und die zugehörigen Pakete
+  im Mitschnitt identifizieren.
+]
+
+#v(1fr)
+#text(size: 9pt, fill: gray)[
+  Quellen: Wireshark – Display Filter Reference;
+  OpenThread – Thread Primer
+]

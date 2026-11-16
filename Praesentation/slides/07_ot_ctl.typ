@@ -3,26 +3,116 @@
 
 == OpenThread CLI und ot-ctl
 
-- Kommandozeilenbasierte Verwaltung
-- Konfiguration des Thread-Netzwerks
-- Abfrage von Netzwerkzuständen
-- Diagnose und Fehlersuche
+#block(
+  fill: rgb("#f5f7f7"),
+  radius: 6pt,
+  inset: 12pt,
+)[
+  *ot-ctl*
 
-== Wichtige Befehle
+  Kommandozeilenwerkzeug zur Steuerung einer
+  OpenThread-Instanz, beispielsweise auf einem
+  Linux-basierten OpenThread Border Router.
+]
 
-- state
-- ipaddr
-- neighbor table
-- router table
-- dataset active
+#v(1em)
 
-// Hier später Terminal-Screenshots einfügen
+- Netzwerkparameter konfigurieren
+- Gerätestatus und IPv6-Adressen anzeigen
+- Nachbarn und Routinginformationen untersuchen
+- Diagnosebefehle und Tests ausführen
 
-== Praktischer Netzwerkaufbau
+#v(0.8em)
 
-- Thread-Netzwerk initialisieren
-- Weitere Geräte hinzufügen
-- Netzwerkrollen untersuchen
-- IPv6-Adressen überprüfen
+#text(fill: rgb("#eb811b"), weight: "bold")[
+  Auf Mikrocontroller-Boards wird häufig
+  direkt die OpenThread CLI verwendet.
+]
 
-// Hier später Live-Demo durchführen
+#v(1fr)
+#text(size: 9pt, fill: gray)[
+  Quelle: OpenThread – CLI Command Reference
+]
+
+
+== Wichtige CLI-Befehle
+
+#table(
+  columns: (1.3fr, 2.2fr),
+  stroke: 0.8pt + rgb("#dddddd"),
+  inset: 9pt,
+
+  table.header(
+    [*Befehl*],
+    [*Funktion*],
+  ),
+
+  [`state`],
+  [Aktuelle Thread-Rolle anzeigen],
+
+  [`ipaddr`],
+  [IPv6-Adressen anzeigen],
+
+  [`neighbor table`],
+  [Nachbarn untersuchen],
+
+  [`router table`],
+  [Router und Routinginformationen],
+
+  [`dataset active`],
+  [Aktiven Netzwerkdatensatz anzeigen],
+
+  [`ping <IPv6-Adresse>`],
+  [IPv6-Erreichbarkeit prüfen],
+)
+
+#v(0.8em)
+
+#text(size: 12pt)[
+  Beispiel auf einem Border Router:
+]
+
+```sh
+sudo ot-ctl state
+sudo ot-ctl ipaddr
+sudo ot-ctl router table
+```
+
+#v(1fr)
+#text(size: 9pt, fill: gray)[
+  Quelle: OpenThread – CLI Command Reference
+]
+
+
+== Netzwerkaufbau: Grundlegender Ablauf
+
+#align(center)[
+  #table(
+    columns: (auto, 1fr),
+    stroke: 0.8pt + rgb("#dddddd"),
+    inset: 10pt,
+
+    [*1*], [Netzwerkparameter festlegen],
+    [*2*], [Thread-Schnittstelle aktivieren],
+    [*3*], [Thread-Protokoll starten],
+    [*4*], [Weitere Geräte mit gültigen Zugangsdaten verbinden],
+    [*5*], [Rollen und Erreichbarkeit prüfen],
+  )
+]
+
+#v(1em)
+
+*Beispiel: Neues Testnetz auf einem CLI-Gerät*
+
+```sh
+dataset init new
+dataset commit active
+ifconfig up
+thread start
+state
+```
+
+#v(1fr)
+#text(size: 9pt, fill: gray)[
+  Quelle: OpenThread – CLI Command Reference
+]

@@ -1,4 +1,4 @@
-
+#import "@preview/metropolyst:0.1.0": *
 #import "config.typ": *
 
 // Einheitliches Theme für die gesamte Präsentation
@@ -39,3 +39,7 @@
 
 // 11 - Fazit
 #include "slides/11_conclusion.typ"
+
+= Literaturverzeichnis
+
+#bibliography("bibliography.bib", style: "ieee")
