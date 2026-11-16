@@ -13,23 +13,23 @@
 // 02 - Architektur
 #include "slides/02_architecture.typ"
 
-// 03 - 6LoWPAN
-#include "slides/03_6lowpan.typ"
+// 03 - IPV6 & 6LoWPAN
+#include "slides/03_ipv6_6lowpan.typ"
 
-// 04 - OpenThread
-#include "slides/04_openthread.typ"
+// 04 - Routing & Netzwerkorganistation
+#include "slides/04_routing_netzwerkorganisation.typ"
 
-// 05 - Routing und RPL
-#include "slides/05_routing.typ"
+// 05 - Duty Cycling
+#include "slides/05_duty_cycling.typ"
 
-// 06 - Radio Duty Cycling
-#include "slides/06_duty_cycling.typ"
+// 06 - OpenThread
+#include "slides/06_openthread.typ"
 
 // 07 - Netzwerkmanagement mit ot-ctl
-#include "slides/07_ot_ctl.typ"
+#include "slides/07_netzwerkaufbau_ot_ctl.typ"
 
 // 08 - IPv6-Kommunikation
-#include "slides/08_ipv6.typ"
+#include "slides/08_ipv6_netzwerkdiagnose.typ"
 
 // 09 - Wireshark und OTA-Sniffing
 #include "slides/09_wireshark.typ"
