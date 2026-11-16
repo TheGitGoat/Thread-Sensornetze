@@ -163,7 +163,7 @@ Der Border Router sollte jetzt auch eine GUI haben die unter `http://localhost:8
 Die OpenThread-CLI innerhalb des Containers starten:
 
 ```bash
-sudo docker exec -it otbr ot-ctl
+docker exec -it otbr ot-ctl
 ```
 
 Thread-Status abfragen:
@@ -251,3 +251,39 @@ Example:
 
 **Child ID=1**:
 RLOC16 = `0x0801` IPv6: `fda7:ebeb:12ae:1:0:ff:fe00:801`
+
+
+### Alternativ
+Child-Ips herausfinden mit
+```
+childip
+```
+
+bzw wenn es kinder von anderen Routern ist:
+```
+meshdiag childip6 <ROUTER-RLOC16>
+```
+z.B. mit `<ROUTER-RLOC16>` = 0x4800
+
+Ausgabe:
+```
+> meshdiag childip6 0x4800
+child-rloc16: 0x4801
+    fd30:b239:9a5c:5c8f:cb11:caf:c621:2ef0
+    fd80:3d9f:3998:1:ca3:681d:edbd:d02
+child-rloc16: 0x4802
+    fd30:b239:9a5c:5c8f:b1f6:7ae5:8b33:e426
+    fd80:3d9f:3998:1:98fd:a7eb:af08:a193
+Done
+```
+
+Ping senden über
+```
+ping fd80:3d9f:3998:1:ca3:681d:edbd:d02 8 1 1 64 10
+```
+mit 
+- `8`: Paketgröße
+- `1`: Anzahl Pings
+- `1`: Intervall zwischen mehreren Pings (1s)
+- `64`: Maximale Netzwerk-Hops
+- `10`: Timeout (s) wie lange auf eine Antwort gewartet wird
