@@ -101,6 +101,17 @@
 ]
 
 
+== Vorbereitung der Sniffer Hardware
+- Ebyte E104-BT5040UA Bluetooth-Stick
+- Flashen der Nordic nRF802154 Firmware
+- Wireshark Interface
+#figure(
+  image("../pictures/2022161134211859.jpg", width: 35%),
+  caption: [
+    E104-BT5040UA @cdebyte2022image
+  ],
+)
+
 == Was sehen wir im Paketmitschnitt?
 
 #table(
