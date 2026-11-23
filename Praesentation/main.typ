@@ -13,29 +13,29 @@
 // 02 - Architektur
 #include "slides/02_architecture.typ"
 
-// 03 - IPV6 & 6LoWPAN
-#include "slides/03_ipv6_6lowpan.typ"
+// 03 - OpenThread
+#include "slides/03_openthread.typ"
 
-// 04 - Routing & Netzwerkorganistation
-#include "slides/04_routing_netzwerkorganisation.typ"
+// 04 - IPV6 & 6LoWPAN
+#include "slides/04_ipv6_6lowpan.typ"
 
-// 05 - Duty Cycling
-#include "slides/05_duty_cycling.typ"
+// 05 - Routing & Netzwerkorganistation
+#include "slides/05_routing_netzwerkorganisation.typ"
 
-// 06 - OpenThread
-#include "slides/06_openthread.typ"
+// 06 - Self-Healing Mesh
+#include "slides/06_self_healing.typ"
 
-// 07 - Netzwerkmanagement mit ot-ctl
-#include "slides/07_netzwerkaufbau_ot_ctl.typ"
+// 07 - Duty Cycling
+#include "slides/07_duty_cycling.typ"
 
-// 08 - IPv6-Kommunikation
-#include "slides/08_ipv6_netzwerkdiagnose.typ"
+// 08 - Netzwerkmanagement mit ot-ctl
+#include "slides/08_netzwerkaufbau_ot_ctl.typ"
 
-// 09 - Wireshark und OTA-Sniffing
-#include "slides/09_wireshark.typ"
+// 09 - IPv6-Kommunikation
+#include "slides/09_ipv6_netzwerkdiagnose.typ"
 
-// 10 - Self-Healing Mesh
-#include "slides/10_self_healing.typ"
+// 10 - Wireshark und OTA-Sniffing
+#include "slides/10_wireshark.typ"
 
 // 11 - Fazit
 #include "slides/11_conclusion.typ"
