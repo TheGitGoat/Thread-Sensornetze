@@ -3,7 +3,7 @@
 
 == Was ist Thread?
 
-- IPv6-basiertes Netzwerkprotokoll
+- IPv6-basiertes Netzwerkprotokoll (sicher?)
 - Entwickelt für energieeffiziente IoT-Geräte
 - Unterstützt selbstorganisierende Mesh-Netzwerke
 - Basiert auf IEEE 802.15.4

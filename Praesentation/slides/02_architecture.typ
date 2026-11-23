@@ -5,6 +5,8 @@
 
 // Hier später Architekturdiagramm einfügen
 
+
+
 == Netzwerkrollen
 
 - Leader

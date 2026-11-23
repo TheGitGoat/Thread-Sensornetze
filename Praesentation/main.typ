@@ -39,3 +39,6 @@
 
 // 11 - Fazit
 #include "slides/11_conclusion.typ"
+
+#pagebreak()
+#bibliography("bibliography.bib")
