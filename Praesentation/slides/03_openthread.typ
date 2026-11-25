@@ -1,7 +1,8 @@
+#import "../config.typ": writer_jan
 
 = OpenThread
 
-== Was ist OpenThread?
+== Was ist OpenThread? #writer_jan
 
 #block(
   fill: rgb("#f5f7f7"),
@@ -36,7 +37,7 @@
 ]
 
 
-== OpenThread: Software und Hardware
+== OpenThread: Software und Hardware #writer_jan
 
 #align(center)[
   #block(width: 80%)[

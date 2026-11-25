@@ -1,7 +1,8 @@
+#import "../config.typ": writer_lotte
 
 = Netzwerkmanagement mit ot-ctl
 
-== OpenThread CLI und ot-ctl
+== OpenThread CLI und ot-ctl #writer_lotte
 
 #block(
   fill: rgb("#f5f7f7"),
@@ -35,7 +36,7 @@
 ]
 
 
-== Wichtige CLI-Befehle
+== Wichtige CLI-Befehle #writer_lotte
 
 #table(
   columns: (1.3fr, 2.2fr),
@@ -84,7 +85,7 @@ sudo ot-ctl router table
 ]
 
 
-== Netzwerkaufbau: Grundlegender Ablauf
+== Netzwerkaufbau: Grundlegender Ablauf #writer_lotte
 
 #align(center)[
   #table(

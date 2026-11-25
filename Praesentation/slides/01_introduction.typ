@@ -1,6 +1,8 @@
+#import "../config.typ": writer_lotte
+
 = Einführung in Thread
 
-== Was ist Thread?
+== Was ist Thread? #writer_lotte
 
 #block(
   fill: rgb("#f5f7f7"),
@@ -35,7 +37,7 @@
 
 
 
-== Warum brauchen wir Thread?
+== Warum brauchen wir Thread? #writer_lotte
 
 #v(1fr)
 
@@ -52,7 +54,7 @@
 ]
 
 
-== Typische Einsatzgebiete
+== Typische Einsatzgebiete #writer_lotte
 
 #v(0.5fr)
 - Smart Home
