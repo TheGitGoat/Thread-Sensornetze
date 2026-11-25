@@ -40,6 +40,8 @@
 // 11 - Fazit
 #include "slides/11_conclusion.typ"
 
-= Literaturverzeichnis
 
-#bibliography("bibliography.bib", style: "ieee")
+#slide[
+  = Literaturverzeichnis
+  #bibliography("bibliography.bib", style: "ieee")
+]
