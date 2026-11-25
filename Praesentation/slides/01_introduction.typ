@@ -81,7 +81,7 @@
   gutter: 12pt,
 
   block(
-    fill: rgb("#f5f7f7"),
+    fill: rgb("#e5eff4"),
     radius: 6pt,
     inset: 12pt,
   )[
@@ -93,7 +93,7 @@
   ],
 
   block(
-    fill: rgb("#f5f7f7"),
+    fill: rgb("#e5eff4"),
     radius: 6pt,
     inset: 12pt,
   )[
@@ -105,7 +105,7 @@
   ],
 
   block(
-    fill: rgb("#f5f7f7"),
+    fill: rgb("#e5eff4"),
     radius: 6pt,
     inset: 12pt,
   )[
@@ -117,7 +117,7 @@
   ],
 
   block(
-    fill: rgb("#f5f7f7"),
+    fill: rgb("#e5eff4"),
     radius: 6pt,
     inset: 12pt,
   )[

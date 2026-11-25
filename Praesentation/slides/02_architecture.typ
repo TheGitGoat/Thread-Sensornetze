@@ -1,3 +1,4 @@
+#set text(hyphenate: true)
 
 = Thread-Architektur
 
@@ -60,6 +61,166 @@
   Quelle: Thread Group – Technical Overview;
   OpenThread – Thread Primer
 ]
+
+== Rollen für Paketweiterleitung
+
+#let color-left = rgb("#2d579c")
+#let color-right = rgb("#00afd8")
+
+// Einstellungen
+#let layout-height = 360pt
+#let image-width = 350pt
+
+#block(
+  width: 100%,
+  height: layout-height,
+)[
+  // Bild im Hintergrund, exakt mittig
+  #place(
+    right + horizon,
+  )[
+    #image(
+      "../images/03_Paketweiterleitung.png",
+      width: image-width,
+    )
+  ]
+
+  // Textspalten im Vordergrund
+  #grid(
+    columns: (1fr, 1.2fr),
+    rows: (1fr, 1fr),
+    gutter: 16pt,
+
+    // Links
+    [
+      #block(
+        width: 100%,
+        fill: color-left,
+        radius: 5pt,
+        inset: 10pt,
+      )[
+        #align(center)[
+          #text(fill: white, weight: "bold")[
+            Mesh Extender
+          ]
+        ]
+      ]
+
+      #v(0.8em)
+
+      - Leitet Pakete weiter
+      - Erweitert das Mesh-Netzwerk
+      - Funkempfänger dauerhaft aktiv
+    ],
+
+    // Mitte bleibt leer
+    [],
+
+    // Rechts
+    [
+      #block(
+        width: 100%,
+        fill: color-right,
+        radius: 5pt,
+        inset: 10pt,
+      )[
+        #align(center)[
+          #text(fill: white, weight: "bold")[
+            End Device
+          ]
+        ]
+      ]
+
+      #v(0.8em)
+
+      - Kommuniziert über einen Parent
+      - Leitet keine fremden Pakete weiter
+      - Kann als Sleepy End Device arbeiten
+    ],
+  )
+]
+
+
+== Gerätetypen
+
+#let color-left = rgb("#ffffff")
+#let color-right = rgb("#ffffff")
+
+#let layout-height = 360pt
+#let image-width = 325pt
+
+#block(
+  width: 100%,
+  height: layout-height,
+)[
+  // Bild im Hintergrund, exakt mittig
+  #place(
+    right + horizon,
+  )[
+    #image(
+      "../images/03_Gerätetypen.png",
+      width: image-width,
+    )
+  ]
+
+  // Textspalten im Vordergrund
+  #grid(
+    columns: (1fr, 1.2fr),
+    rows: (1fr, 1fr),
+    gutter: 16pt,
+
+    // Links
+    [
+      #block(
+        width: 100%,
+        fill: color-left,
+        radius: 1pt,
+        inset: 10pt,
+        stroke: 3pt + black,
+      )[
+        #align(center)[
+          #text(fill: black, weight: "bold")[
+            Full Thread Device
+          ]
+        ]
+      ]
+
+      #v(0.8em)
+
+      - Leitet Pakete weiter
+      - Erweitert das Mesh-Netzwerk
+      - Funkempfänger dauerhaft aktiv
+    ],
+
+    // Mitte bleibt leer
+    [],
+
+    // Rechts
+    [
+      #block(
+        width: 100%,
+        fill: color-right,
+        radius: 1pt,
+        inset: 10pt,
+        stroke: 3pt + black,
+      )[
+        #align(center)[
+          #text(fill: black, weight: "bold")[
+            Minimal Thread Device
+          ]
+        ]
+      ]
+
+      #v(0.8em)
+
+      - Kommuniziert über einen Parent
+      - Leitet keine fremden Pakete weiter
+      - Kann als Sleepy End Device arbeiten
+    ],
+  )
+]
+
+
 
 
 == Mesh-Netzwerk und Netzwerkrollen

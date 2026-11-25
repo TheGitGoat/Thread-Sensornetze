@@ -3,6 +3,9 @@
 
 // Zentrale Theme-Konfiguration
 #let thread-theme = metropolyst-theme.with(
+
+  main-background-color: white,
+  
   config-info(
     title: [Thread - IPv6-basiertes Mesh-Netzwerk],
     subtitle: [Architektur, Routing und praktische Analyse],
