@@ -165,3 +165,44 @@
   Quelle: RFC 6282
 ]
 
+== Grundlagen IPv6
+
+Scopes: \
+Localhost: ::1 \
+Link-Local-Scope fe80.. \#nicht routbar \
+Multicast-Scopes ff.. \
+Unique-Local-Scope fc.. fd.. \
+Global Scope 2.. 3.. 4.. 5..
+
+IPv6 Adresse 128bit \
+Netzwerkprefix - Geräteaddresse \
+64 bit #h(4cm) 64 bit \
+
+
+TODO Q: https://www.elektronik-kompendium.de/sites/net/2107111.htm
+
+== RLOC16 - Postfix
+#figure(
+  image("../pictures/ot-primer-rloc16.png", width: 80%),
+  caption: [
+    RLOC16 Kindaddresse @openthreadRloc16image
+  ],
+)
+
+
+== RLOC16 - Zusammensetzung
+#figure(
+  image("../pictures/ot-primer-rloc.png", width: 80%),
+  caption: [
+    Zusammensetzung IPv6 und RLOC16 @openthreadRlocStandard
+  ],
+)
+
+
+== RLOC16 - Beispiel
+#figure(
+  image("../pictures/ot-primer-rloc-topology-change.png", width: 50%),
+  caption: [
+    Router im Kindern und Addresse @openthreadRlocTopologyChangeStandard
+  ],
+)
