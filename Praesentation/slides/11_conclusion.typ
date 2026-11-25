@@ -1,7 +1,8 @@
+#import "../config.typ": writer_lotte
 
 = Fazit
 
-== Stärken und Grenzen von Thread
+== Stärken und Grenzen von Thread #writer_lotte
 
 #grid(
   columns: (1fr, 1fr),
@@ -49,7 +50,7 @@
 ]
 
 
-== Zusammenfassung und Diskussion
+== Zusammenfassung und Diskussion #writer_lotte
 
 #align(center)[
   #text(size: 26pt, weight: "bold")[

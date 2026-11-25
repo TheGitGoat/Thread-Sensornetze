@@ -1,7 +1,8 @@
+#import "../config.typ": writer_jan
 
 = Radio Duty Cycling
 
-== Warum ist Duty Cycling wichtig?
+== Warum ist Duty Cycling wichtig? #writer_jan
 
 #grid(
   columns: (1fr, 1fr),
@@ -44,7 +45,7 @@
 ]
 
 
-== Sleepy End Devices (SED)
+== Sleepy End Devices (SED) #writer_jan
 
 #align(center)[
   #table(

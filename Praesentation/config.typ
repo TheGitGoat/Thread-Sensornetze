@@ -14,3 +14,15 @@
     institution: [HTW Dresden],
   ),
 )
+
+#let print_writer = true //deaktivert Zuordnungs-Tags
+
+#let writer_with_name(name) = {
+  if print_writer {
+    text(name, size: 13pt)
+  }
+}
+
+#let writer_lotte = writer_with_name("[Lotte]")
+#let writer_jan = writer_with_name("[Jan]")
+#let writer_anthony = writer_with_name("[Anthony]")

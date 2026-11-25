@@ -1,8 +1,9 @@
 #import "@preview/metropolyst:0.1.0": *
+#import "../config.typ": writer_lotte
 
 = Einführung in Thread
 
-== Was ist Thread?
+== Was ist Thread? #writer_lotte
 
 #block(
   fill: rgb("#f5f7f7"),
@@ -38,7 +39,7 @@
 
 
 
-== Warum brauchen wir Thread?
+== Warum brauchen wir Thread? #writer_lotte
 
 #grid(
   columns: (1fr, 1fr),
@@ -74,7 +75,7 @@
 ]
 
 
-== Typische Einsatzgebiete
+== Typische Einsatzgebiete #writer_lotte
 
 #grid(
   columns: (1fr, 1fr),

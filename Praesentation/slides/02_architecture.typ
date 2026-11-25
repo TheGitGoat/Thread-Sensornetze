@@ -1,8 +1,10 @@
+#import "../config.typ": writer_jan
+
 #set text(hyphenate: true)
 
 = Thread-Architektur
 
-== Der Thread-Protokollstack
+== Der Thread-Protokollstack #writer_jan
 
 #align(center)[
   #table(
@@ -62,7 +64,7 @@
   OpenThread – Thread Primer
 ]
 
-== Rollen für Paketweiterleitung
+== Rollen für Paketweiterleitung #writer_jan
 
 #let color-left = rgb("#2d579c")
 #let color-right = rgb("#00afd8")
@@ -141,7 +143,7 @@
 ]
 
 
-== Gerätetypen
+== Gerätetypen #writer_jan
 
 #let color-left = rgb("#ffffff")
 #let color-right = rgb("#ffffff")
@@ -223,7 +225,7 @@
 
 
 
-== Mesh-Netzwerk und Netzwerkrollen
+== Mesh-Netzwerk und Netzwerkrollen #writer_jan
 
 #grid(
   columns: (1.2fr, 1fr),
@@ -317,7 +319,7 @@
 ]
 
 
-== Gerätetypen in Thread
+== Gerätetypen in Thread #writer_jan
 
 #table(
   columns: (1.2fr, 2fr, 2fr),
@@ -366,7 +368,7 @@
 ]
 
 
-== Border Router: Verbindung zu anderen IP-Netzen
+== Border Router: Verbindung zu anderen IP-Netzen #writer_jan
 
 #align(center)[
   #grid(

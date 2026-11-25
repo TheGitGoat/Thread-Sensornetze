@@ -1,7 +1,8 @@
+#import "../config.typ": writer_jan
 
 = Routing in Thread
 
-== Wie funktioniert Thread-Routing?
+== Wie funktioniert Thread-Routing? #writer_jan
 
 - Router bilden das weiterleitende Mesh-Netzwerk
 - Kommunikation über einen oder mehrere Funkhops
@@ -29,7 +30,7 @@
 ]
 
 
-== Mesh Link Establishment (MLE)
+== Mesh Link Establishment (MLE) #writer_jan
 
 #grid(
   columns: (1fr, 1fr),
@@ -73,7 +74,7 @@
 ]
 
 
-== Vergleich: Thread-Routing und RPL
+== Vergleich: Thread-Routing und RPL #writer_jan
 
 #table(
   columns: (1.1fr, 1.4fr, 1.4fr),

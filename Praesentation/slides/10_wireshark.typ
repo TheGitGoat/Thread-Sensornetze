@@ -1,7 +1,8 @@
+#import "../config.typ": writer_anthony
 
 = Netzwerkanalyse mit Wireshark
 
-== Warum Wireshark?
+== Warum Wireshark? #writer_anthony
 
 - Netzwerkverkehr auf Paketebene untersuchen
 - Protokollinformationen sichtbar machen
@@ -30,7 +31,7 @@
 ]
 
 
-== Over-the-Air Packet Sniffing
+== Over-the-Air Packet Sniffing #writer_anthony
 
 #align(center)[
   #grid(
@@ -101,7 +102,7 @@
 ]
 
 
-== Vorbereitung der Sniffer Hardware
+== Vorbereitung der Sniffer Hardware #writer_anthony
 - Ebyte E104-BT5040UA Bluetooth-Stick
 - Flashen der Nordic nRF802154 Firmware
 - Wireshark Interface
@@ -112,7 +113,7 @@
   ],
 )
 
-== Was sehen wir im Paketmitschnitt?
+== Was sehen wir im Paketmitschnitt? #writer_anthony
 
 #table(
   columns: (1.2fr, 2.2fr),
