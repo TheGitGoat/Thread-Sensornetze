@@ -4,6 +4,7 @@
 // Einheitliches Theme für die gesamte Präsentation
 #show: thread-theme
 
+#set strong(delta: 500)
 
 // Titelfolie
 #title-slide()
@@ -41,6 +42,8 @@
 // 11 - Fazit
 #include "slides/11_conclusion.typ"
 
-= Literaturverzeichnis
 
-#bibliography("bibliography.bib", style: "ieee")
+#slide[
+  = Literaturverzeichnis
+  #bibliography("bibliography.bib", style: "ieee")
+]
