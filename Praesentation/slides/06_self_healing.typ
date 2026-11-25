@@ -1,7 +1,8 @@
+#import "../config.typ": writer_jan
 
 = Self-Healing Mesh
 
-== Was bedeutet Self-Healing?
+== Was bedeutet Self-Healing? #writer_jan
 
 #block(
   fill: rgb("#f5f7f7"),
@@ -34,7 +35,7 @@
 ]
 
 
-== Dynamisches Rerouting
+== Dynamisches Rerouting #writer_jan
 
 #grid(
   columns: (1fr, 1fr),
