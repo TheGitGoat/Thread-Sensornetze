@@ -4,6 +4,8 @@
 // Einheitliches Theme für die gesamte Präsentation
 #show: thread-theme
 
+#set strong(delta: 500)
+
 // Titelfolie
 #title-slide()
 

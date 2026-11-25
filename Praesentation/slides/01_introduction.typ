@@ -1,5 +1,3 @@
-#import "@preview/metropolyst:0.1.0": *
-
 = Einführung in Thread
 
 == Was ist Thread?
@@ -10,126 +8,97 @@
   inset: 14pt,
 )[
   #text(size: 22pt, weight: "bold")[
-    Thread ist ein IPv6-basiertes Funknetzwerkprotokoll
+    Thread ist ein IPv6-basiertes Netzwerkprotokoll
     für energieeffiziente IoT-Geräte.
   ]
 ]
 
 #v(1em)
 
-- Drahtlose Kommunikation über *IEEE 802.15.4*
+- Funkkommunikation auf Basis von *IEEE 802.15.4*
 - Selbstorganisierendes *Mesh-Netzwerk*
-- Direkte Kommunikation auf Basis von *IPv6*
-- Entwickelt für Geräte mit geringem Energiebedarf
-- Netzwerkprotokoll, unabhängig von der Anwendung
+- Direkte Kommunikation über *IPv6*
+- Unterstützt batteriebetriebene Geräte
+- Unabhängig von der Anwendungsschicht, z. B. Matter
 
 #v(0.5em)
 
 #text(fill: rgb("#eb811b"), weight: "bold")[
   Ziel: Sichere, zuverlässige und energieeffiziente
-  Vernetzung von IoT-Geräten.
+  Kommunikation zwischen IoT-Geräten.
 ]
 
 #v(1fr)
 #text(size: 9pt, fill: gray)[
-  Quelle: OpenThread – Thread Primer (Was ist Thread?)
+  Quelle: @openthread-primer
 ]
-
 
 
 
 == Warum brauchen wir Thread?
 
-#grid(
-  columns: (1fr, 1fr),
-  gutter: 20pt,
-
-  [
-    *Herausforderungen im IoT*
-
-    - Viele verteilte Sensoren und Aktoren
-    - Batteriebetriebene Geräte
-    - Begrenzte Funkreichweite
-    - Zuverlässige Kommunikation erforderlich
-    - Unterschiedliche Hersteller und Systeme
-  ],
-
-  [
-    *Lösungsansätze von Thread*
-
-    - Energiesparende Endgeräte
-    - Mehrere Funkhops durch Mesh-Routing
-    - Automatische Netzwerkanpassung
-    - Verschlüsselte Kommunikation
-    - IPv6 als gemeinsame Grundlage
-  ],
-)
-
-
-
 #v(1fr)
+
+- Niedriger Stromverbrauch (deutlich geringer als WLAN)
+- Geringe Latenz und schnelle Reaktionszeiten
+- Selbstheilendes Mesh-Netzwerk
+- Einfache und hohe Skalierbarkeit
+- Sichere Kommunikation durch AES-128-Verschlüsselung
+
+
+#v(2fr)
 #text(size: 9pt, fill: gray)[
-  Quellen: OpenThread – Thread Primer;
-  Thread Group – Thread Benefits
+  Quellen: @openthread-primer; @threadgroup-benefits
 ]
 
 
 == Typische Einsatzgebiete
 
-#grid(
-  columns: (1fr, 1fr),
-  gutter: 12pt,
-
-  block(
-    fill: rgb("#f5f7f7"),
-    radius: 6pt,
-    inset: 12pt,
-  )[
-    *Smart Home*
-
-    - Beleuchtung
-    - Thermostate
-    - Tür- und Fenstersensoren
-  ],
-
-  block(
-    fill: rgb("#f5f7f7"),
-    radius: 6pt,
-    inset: 12pt,
-  )[
-    *Gebäudeautomatisierung*
-
-    - Raumklimasteuerung
-    - Präsenzsensoren
-    - Energiemanagement
-  ],
-
-  block(
-    fill: rgb("#f5f7f7"),
-    radius: 6pt,
-    inset: 12pt,
-  )[
-    *Sensornetzwerke*
-
-    - Temperaturmessung
-    - Luftfeuchtigkeit
-    - Zustandsüberwachung
-  ],
-
-  block(
-    fill: rgb("#f5f7f7"),
-    radius: 6pt,
-    inset: 12pt,
-  )[
-    *Vernetzte Aktoren*
-
-    - Schalter
-    - Ventile
-    - Steuerungssysteme
-  ],
-)
+#v(0.5fr)
+- Smart Home
+  - Beleuchtung, Thermostate, Tür- und Fenstersensoren
+- Gebäudeautomatisierung
+  - Raumklimasteuerung, Präsenzsensoren, Energiemanagement
+- Sicherheit und Zugangskontrolle
+  - Türkontakte, Alarmanlagen, Zutrittskontrollsysteme
+- Sensorik und Monitoring
+  - Temperaturmessung, Feuchtigkeit, Anlagenüberwachung
 
 #v(1fr)
 #text(size: 9pt, fill: gray)[
-  Quelle: Thread Group – Overview / Market Segments
+  Quelle: @threadgroup-overview
 ]
+
+== Thread im Vergleich
+
+#v(0.5fr)
+
+#table(
+  columns: (1.1fr, 1.4fr, 2fr),
+  align: (left, left, left),
+  inset: 8pt,
+
+  table.header(
+    [#strong[Standard]],
+    [#strong[Einsatzgebiet]],
+    [#strong[Eigenschaften]],
+  ),
+
+  [WLAN],
+  [Smartphones, Kameras],
+  [Hohe Datenrate, höherer Energiebedarf],
+
+  [Bluetooth LE],
+  [Wearables, Sensoren],
+  [Geringer Energieverbrauch, kurze Reichweite],
+
+  [Zigbee],
+  [Smart Home],
+  [Energieeffizientes Mesh-Netzwerk],
+
+  [#strong[Thread]],
+  [#strong[Smart Home, IoT]],
+  [#strong[IPv6-basiertes, energieeffizientes Mesh-Netzwerk]],
+)
+
+#v(1fr)
