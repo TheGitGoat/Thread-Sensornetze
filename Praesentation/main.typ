@@ -1,6 +1,8 @@
 #import "@preview/metropolyst:0.1.0": *
 #import "config.typ": *
 
+#set text(lang: "de")
+
 // Einheitliches Theme für die gesamte Präsentation
 #show: thread-theme
 
@@ -43,6 +45,7 @@
 #include "slides/11_conclusion.typ"
 
 
+#set text(size:16pt)
 #slide[
   = Literaturverzeichnis
   #bibliography("bibliography.bib", style: "ieee")

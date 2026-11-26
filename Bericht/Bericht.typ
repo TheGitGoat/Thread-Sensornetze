@@ -13,3 +13,9 @@
 #include "Technischer Hintergrund/Technischer Hintergrund.typ"
 
 #include "Versuchsaufbau/Versuchsaufbau.typ"
+
+
+Simulation mit OTNS
+```
+docker run -it -p 8997-9000:8997-9000 openthread/otns-playground
+```

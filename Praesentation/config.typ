@@ -1,4 +1,3 @@
-
 #import "@preview/metropolyst:0.1.0": *
 
 // Zentrale Theme-Konfiguration
